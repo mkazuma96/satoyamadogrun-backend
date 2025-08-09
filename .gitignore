@@ -1,0 +1,27 @@
+    # Virtual environment
+    venv/
+    .venv/
+
+    # Byte-code files
+    __pycache__/
+    *.pyc
+    *.pyo
+    *.pyd
+
+    # Database
+    *.db
+    *.sqlite3
+
+    # Environment variables
+    .env
+    .env.local
+
+    # Logs
+    *.log
+    logs/
+
+    # IDE-specific files (e.g., VS Code)
+    .vscode/
+
+    # macOS specific
+    .DS_Store
