@@ -30,7 +30,7 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r backend/requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
@@ -38,9 +38,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: python-app
-          path: |
-            .
-            !venv/
+          path: backend
 
   deploy:
     runs-on: ubuntu-latest
@@ -59,3 +57,5 @@ jobs:
           app-name: 'app-002-gen10-step3-2-py-oshima14'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2036AF215E7A4E2D81E01BA7F630F323 }}
+          package: backend
+          
